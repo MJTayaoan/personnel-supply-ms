@@ -25,12 +25,16 @@ class Asset extends Model
         'updated_at',
         'deleted_at',
         'description',
-        'danger_level',
     ];
 
     protected function serializeDate(DateTimeInterface $date)
     {
         return $date->format('Y-m-d H:i:s');
+    }
+
+    public function stocks()
+    {
+        return $this->hasMany(Stock::class,'asset_id', 'id');
     }
 
     public function transactions()

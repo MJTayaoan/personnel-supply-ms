@@ -26,18 +26,20 @@
 
 <body class="app header-fixed sidebar-fixed aside-menu-fixed pace-done sidebar-lg-show">
     <header class="app-header navbar">
-        <button class="navbar-toggler sidebar-toggler d-lg-none mr-auto" type="button" data-toggle="sidebar-show">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand" href="#">
-            <span class="navbar-brand-full">{{ trans('panel.site_title') }}</span>
-            <span class="navbar-brand-minimized">{{ trans('panel.site_title') }}</span>
-        </a>
-        <button class="navbar-toggler sidebar-toggler d-md-down-none" type="button" data-toggle="sidebar-lg-show">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <div>
+            <div>
+            <button class="navbar-toggler sidebar-toggler " type="button" data-toggle="sidebar-lg-show">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <ul class="nav navbar-nav ml-auto">
+            <a class="navbar-brand"  href="/home">
+                <span class="navbar-brand-full"><img src="{{ asset('images/logo1.png')}}" style="width: 115%;"></span>
+                <span class="navbar-brand-minimized"><img src="{{ asset('images/logo1.png')}}" style="width: 359%;"></span>
+                </a>
+            </div>
+
+            <div>
+            <ul class="nav navbar-nav ml-auto">
             @if(count(config('panel.available_languages', [])) > 1)
                 <li class="nav-item dropdown d-md-down-none">
                     <a class="nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
@@ -50,9 +52,9 @@
                     </div>
                 </li>
             @endif
-
-
-        </ul>
+            </ul>
+            </div>
+    </div>
     </header>
 
     <div class="app-body">
@@ -142,7 +144,7 @@
       selector: 'td:first-child'
     },
     order: [],
-    scrollX: true,
+    scrollX: false,
     pageLength: 100,
     dom: 'lBfrtip<"actions">',
     buttons: [
@@ -162,30 +164,7 @@
           columns: ':visible'
         }
       },
-      {
-        extend: 'copy',
-        className: 'btn-default',
-        text: copyButtonTrans,
-        exportOptions: {
-          columns: ':visible'
-        }
-      },
-      {
-        extend: 'csv',
-        className: 'btn-default',
-        text: csvButtonTrans,
-        exportOptions: {
-          columns: ':visible'
-        }
-      },
-      {
-        extend: 'excel',
-        className: 'btn-default',
-        text: excelButtonTrans,
-        exportOptions: {
-          columns: ':visible'
-        }
-      },
+      
       {
         extend: 'pdf',
         className: 'btn-default',

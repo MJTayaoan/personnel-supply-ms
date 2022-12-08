@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Asset;
+use App\Stock;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\MassDestroyAssetRequest;
 use App\Http\Requests\StoreAssetRequest;
@@ -63,6 +64,7 @@ class AssetsController extends Controller
     {
         abort_if(Gate::denies('asset_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
+        $asset->stocks()->delete();
         $asset->delete();
 
         return back();

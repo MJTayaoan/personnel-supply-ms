@@ -2,8 +2,8 @@
 
 return [
     'userManagement' => [
-        'title'          => 'User management',
-        'title_singular' => 'User management',
+        'title'          => 'User Management',
+        'title_singular' => 'User Management',
     ],
     'permission'     => [
         'title'          => 'Permissions',
@@ -40,8 +40,8 @@ return [
         ],
     ],
     'user'           => [
-        'title'          => 'Users',
-        'title_singular' => 'User',
+        'title'          => 'Personnels',
+        'title_singular' => 'Personnel',
         'fields'         => [
             'id'                       => 'ID',
             'id_helper'                => '',
@@ -68,8 +68,8 @@ return [
         ],
     ],
     'asset'         => [
-        'title'          => 'Assets',
-        'title_singular' => 'Asset',
+        'title'          => 'Supplies',
+        'title_singular' => 'Supply',
         'fields'         => [
             'id'                 => 'ID',
             'id_helper'          => '',
@@ -86,8 +86,8 @@ return [
         ],
     ],
     'team'           => [
-        'title'          => 'Hospitals',
-        'title_singular' => 'Hospital',
+        'title'          => 'Personnels',
+        'title_singular' => 'Personnel',
         'fields'         => [
             'id'                => 'ID',
             'id_helper'         => '',
@@ -107,7 +107,7 @@ return [
         'fields'         => [
             'id'                   => 'ID',
             'id_helper'            => '',
-            'asset'                => 'Asset',
+            'asset'                => 'Supply',
             'asset_helper'         => '',
             'current_stock'        => 'Current Stock',
             'current_stock_helper' => '',
@@ -127,7 +127,7 @@ return [
         'fields'         => [
             'id'                => 'ID',
             'id_helper'         => '',
-            'asset'             => 'Asset',
+            'asset'             => 'Supply',
             'asset_helper'      => '',
             'stock'             => 'Stock',
             'stock_helper'      => '',

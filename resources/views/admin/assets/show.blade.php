@@ -39,14 +39,6 @@
                             {{ $asset->description }}
                         </td>
                     </tr>
-                    <tr>
-                        <th>
-                            Danger level
-                        </th>
-                        <td>
-                            {{ $asset->danger_level }}
-                        </td>
-                    </tr>
                 </tbody>
             </table>
             <div class="form-group">

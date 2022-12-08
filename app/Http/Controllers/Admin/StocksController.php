@@ -72,6 +72,7 @@ class StocksController extends Controller
     {
         abort_if(Gate::denies('stock_delete'), Response::HTTP_FORBIDDEN, '403 Forbidden');
 
+        $stock->asset()->delete();
         $stock->delete();
 
         return back();
